@@ -4,7 +4,11 @@ import Users from './components/Users';
 
 class app extends Component {
   render() {
-    return <Users />;
+    return (
+      <UsersProvider>
+        <Users />
+      </UsersProvider>
+    );
   }
 }
 
