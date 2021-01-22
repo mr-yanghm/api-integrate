@@ -36,7 +36,8 @@ const error = error => ({
     error: error
 });
 
-const UsersContext = (state, action) => {
+// 위에서 만든 객체 / 유틸 함수들을 사용하여 리듀서 작성
+function usersReducer(state, action) {
     switch (action.type) {
         case 'GET_USERS':
             return {
@@ -130,5 +131,3 @@ export async function getUser(dispatch, id) {
         dispatch({ type: 'GET_USER_ERROR', error: e });
     }
 }
-
-export default UsersContext;

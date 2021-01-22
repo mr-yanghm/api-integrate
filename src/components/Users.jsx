@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
-import useAsync from './useAsync';
 import User from './User';
+import { getUsers, useUsersDispatch, useUsersState } from './UsersContext';
 
 const Users = () => {
     const [userId, setUserId] = useState(null);
